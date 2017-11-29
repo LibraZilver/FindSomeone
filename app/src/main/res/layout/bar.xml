@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:minHeight="?android:attr/actionBarSize"
+    android:background="@drawable/border_bar"
+    android:layout_weight="6.5"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:src="@drawable/ic_home"
+        android:id="@+id/home"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:src="@drawable/ic_history"
+        android:id="@+id/history"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/scanner_qr"
+        android:layout_weight="1.5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:src="@drawable/ic_near_me"
+        android:id="@+id/event_note"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:src="@drawable/ic_dehaze"
+        android:id="@+id/setting"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
