@@ -4,109 +4,51 @@
     android:layout_height="?android:attr/actionBarSize"
     android:layout_weight="6"
     android:background="@color/colorPrimary"
-    android:minHeight="?android:attr/actionBarSize"
     android:orientation="horizontal">
 
-    <LinearLayout
-        android:id="@+id/home"
+
+    <ImageView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:padding="@dimen/bar_padding"
+        android:src="@drawable/ic_home"
+        android:tint="@color/colorSelectedBar" />
 
-        <ImageView
-            android:tint="@android:color/darker_gray"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:src="@drawable/ic_home" />
-
-        <TextView
-            android:textColor="@color/colorPrimary"
-            android:textSize="10sp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="14dp"
-            android:text="@string/home" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/history"
+    <ImageView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:padding="@dimen/bar_padding"
+        android:src="@drawable/ic_history"
+        android:tint="@color/colorPrimaryDark" />
 
-        <ImageView
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:src="@drawable/ic_history" />
 
-        <TextView
-            android:textSize="10sp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="14dp"
-            android:text="@string/history" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:padding="6dp"
-        android:id="@+id/scanner"
+    <ImageView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:padding="@dimen/bar_padding"
+        android:src="@drawable/ic_qrcode_scan"
+        android:tint="@color/colorPrimaryDark" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_qrcode_scan" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/event"
+    <ImageView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:padding="@dimen/bar_padding"
+        android:src="@drawable/ic_near_me"
+        android:tint="@color/colorPrimaryDark" />
 
-        <ImageView
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:src="@drawable/ic_near_me" />
 
-        <TextView
-            android:textSize="10sp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="14dp"
-            android:text="@string/event" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/setting"
+    <ImageView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:src="@drawable/ic_dehaze" />
-
-        <TextView
-            android:textSize="10sp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="14dp"
-            android:text="@string/more" />
-    </LinearLayout>
+        android:padding="@dimen/bar_padding"
+        android:src="@drawable/ic_dehaze"
+        android:tint="@color/colorPrimaryDark" />
 
 
 </LinearLayout>

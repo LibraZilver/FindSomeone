@@ -4,6 +4,6 @@
     <color name="colorPrimaryDark">#73110C</color>
     <color name="colorAccent">#FF4081</color>
 
-
+    <color name="colorSelectedBar">#FFFFFF</color>
 
 </resources>
