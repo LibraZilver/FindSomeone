@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FindSomeone</string>
+    <string name="home">Home</string>
+    <string name="more">More</string>
+    <string name="event">Event</string>
+    <string name="history">History</string>
 </resources>
