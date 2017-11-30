@@ -4,8 +4,10 @@
     <color name="colorPrimaryDark">#73110C</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="colorSelectedBar">#E62117</color>
-    <color name="colorUnSelectedBar">#606060</color>
+    <color name="colorSelectedBar">@color/colorPrimary</color>
+    <color name="colorUnSelectedBar">#A1A1A1</color>
     <color name="colorBorderTopBar">#E1E1E1</color>
 
+    <color name="colorRipple">#FFB2B2</color>
+    rippleColor
 </resources>
