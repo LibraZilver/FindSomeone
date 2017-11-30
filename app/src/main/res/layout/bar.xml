@@ -3,52 +3,64 @@
     android:layout_width="match_parent"
     android:layout_height="?android:attr/actionBarSize"
     android:layout_weight="6"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/border_top_bar"
+    android:gravity="center"
     android:orientation="horizontal">
 
 
     <ImageView
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/height_icon_bar"
+        android:layout_gravity="center"
         android:layout_weight="1"
-        android:padding="@dimen/bar_padding"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/ic_home"
         android:tint="@color/colorSelectedBar" />
 
     <ImageView
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/height_icon_bar"
         android:layout_weight="1"
-        android:padding="@dimen/bar_padding"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/ic_history"
-        android:tint="@color/colorPrimaryDark" />
+        android:tint="@color/colorUnSelectedBar" />
 
 
     <ImageView
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="34dp"
         android:layout_weight="1"
-        android:padding="@dimen/bar_padding"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/ic_qrcode_scan"
-        android:tint="@color/colorPrimaryDark" />
+        android:tint="@color/colorUnSelectedBar" />
 
 
     <ImageView
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/height_icon_bar"
         android:layout_weight="1"
-        android:padding="@dimen/bar_padding"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/ic_near_me"
-        android:tint="@color/colorPrimaryDark" />
+        android:tint="@color/colorUnSelectedBar" />
 
 
     <ImageView
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/height_icon_bar"
         android:layout_weight="1"
-        android:padding="@dimen/bar_padding"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/ic_dehaze"
-        android:tint="@color/colorPrimaryDark" />
+        android:tint="@color/colorUnSelectedBar" />
 
 
 </LinearLayout>

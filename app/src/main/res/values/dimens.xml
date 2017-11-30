@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="actionBarSize">50dp</dimen>
+    <dimen name="bar_padding">12dp</dimen>
+    <dimen name="height_icon_bar">30dp</dimen>
+</resources>

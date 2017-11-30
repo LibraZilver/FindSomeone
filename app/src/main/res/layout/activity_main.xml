@@ -6,11 +6,17 @@
     android:layout_height="match_parent"
     tools:context="com.example.libra.findsomeone.MainActivity">
 
+
+    <include
+        android:id="@+id/search_bar"
+        layout="@layout/search_bar" />
+
+
     <include
         android:id="@+id/bar"
         layout="@layout/bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
