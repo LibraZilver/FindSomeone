@@ -6,7 +6,9 @@
 
     <color name="colorSelectedTab">@color/colorPrimary</color>
     <color name="colorUnSelectedTab">#A1A1A1</color>
-    <color name="colorBorderTopBar">#E1E1E1</color>
+    <color name="colorBorderBar">#E1E1E1</color>
+    <color name="colorBackgroundBar">#FAFAFA</color>
+    <color name="colorBackgroundQRScannerButton">#F6F6F6</color>
 
     <color name="colorRipple">#FFB2B2</color>
     rippleColor

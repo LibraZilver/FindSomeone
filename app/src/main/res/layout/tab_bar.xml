@@ -34,22 +34,15 @@
         android:tint="@color/colorUnSelectedTab" />
 
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_icon_bar"
+        android:layout_weight="1"
+      />
+
+
     <ImageView
         android:tag="2"
-        android:id="@+id/qr_scanner_tab"
-        android:layout_width="0dp"
-        android:layout_height="34dp"
-        android:layout_weight="1"
-        android:background="?android:selectableItemBackgroundBorderless"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="onClickTabBar"
-        android:src="@drawable/ic_qrcode_scan"
-        android:tint="@color/colorUnSelectedTab" />
-
-
-    <ImageView
-        android:tag="3"
         android:id="@+id/event_tab"
         android:layout_width="0dp"
         android:layout_height="@dimen/height_icon_bar"
@@ -63,7 +56,7 @@
 
 
     <ImageView
-        android:tag="4"
+        android:tag="3"
         android:id="@+id/setting_tab"
         android:layout_width="0dp"
         android:layout_height="@dimen/height_icon_bar"
