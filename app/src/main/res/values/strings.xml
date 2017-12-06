@@ -5,6 +5,5 @@
     <string name="event">Event</string>
     <string name="history">History</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_qr_hint">วาง QRCode เพื่อสแกน</string>
 </resources>

@@ -107,8 +107,8 @@ public class QRActivity extends AppCompatActivity {
     private void setupCameraSource() {
         mCameraSource = new CameraSource.Builder(getApplicationContext(), mBarcodeDetector)
                 .setFacing(CameraSource.CAMERA_FACING_BACK)
-                .setRequestedFps(15.0f)
-                .setRequestedPreviewSize(1600, 1024)
+                .setRequestedFps(30.0f)
+                .setRequestedPreviewSize(1280, 720)
                 .setAutoFocusEnabled(true)
                 .build();
     }

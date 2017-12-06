@@ -1,11 +1,11 @@
 package com.example.libra.findsomeone;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -60,62 +60,37 @@ public class MainActivity extends AppCompatActivity {
         mTabBar.add(mSettingTab);
     }
 
-
     private void initializeQRScannerButton() {
         final Animation animationEnlarge = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_grow);
         final Animation animationShrink = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_shrink);
-
-        mQRScannerButton.setOnTouchListener(new View.OnTouchListener() {
+        animationShrink.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public boolean onTouch(View v, final MotionEvent event) {
-
-                switch (event.getAction() & MotionEvent.ACTION_MASK) {
-                    case MotionEvent.ACTION_DOWN:
-                        animationEnlarge.setAnimationListener(new Animation.AnimationListener() {
-                            @Override
-                            public void onAnimationStart(Animation animation) {
-                            }
-
-                            @Override
-                            public void onAnimationRepeat(Animation animation) {
-                            }
-
-                            @Override
-                            public void onAnimationEnd(Animation animation) {
-                                if (event.getAction() != MotionEvent.ACTION_DOWN && MotionEvent.ACTION_MASK != MotionEvent.ACTION_DOWN)
-                                    mQRScannerButton.startAnimation(animationShrink);
-                            }
-                        });
-                        animationShrink.setAnimationListener(new Animation.AnimationListener() {
-                            @Override
-                            public void onAnimationStart(Animation animation) {
-                            }
-
-                            @Override
-                            public void onAnimationRepeat(Animation animation) {
-                            }
-
-                            @Override
-                            public void onAnimationEnd(Animation animation) {
-
-                                Intent qrScanIntent = new Intent(getApplicationContext(), QRActivity.class);
-                                startActivityForResult(qrScanIntent, QR_REQUEST);
-                            }
-                        });
-
-                        animationEnlarge.setFillAfter(true);
-                        mQRScannerButton.startAnimation(animationEnlarge);
-
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        if (animationEnlarge.hasEnded())
-                            mQRScannerButton.startAnimation(animationShrink);
-                        break;
-                }
-
-                return false;
+            public void onAnimationStart(Animation animation) {
             }
 
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Intent qrScanIntent = new Intent(MainActivity.this, QRActivity.class);
+                startActivityForResult(qrScanIntent, QR_REQUEST);
+                overridePendingTransition( R.anim.slide_in_up, R.anim.slide_out_up );
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+        });
+        animationEnlarge.setFillAfter(true);
+
+        mQRScannerButton.setOnTouchListener(new AnimationOnTouchListener() {
+            @Override
+            void animatePressed() {
+                mQRScannerButton.startAnimation(animationEnlarge);
+            }
+
+            @Override
+            void animateBackToNormal() {
+                mQRScannerButton.startAnimation(animationShrink);
+            }
         });
     }
 
@@ -143,36 +118,6 @@ public class MainActivity extends AppCompatActivity {
         int selectedTab = Integer.parseInt(v.getTag().toString());
         if (mCurrentTab == selectedTab) return;
         setSelectedTab(selectedTab);
-    }
-
-//    private void setAnimationGrowShrink(final ImageView imgV) {
-//
-//        imgV.startAnimation(animationShrink);
-//
-//
-//        animationShrink.setAnimationListener(new Animation.AnimationListener() {
-//            @Override
-//            public void onAnimationStart(Animation animation) {
-//            }
-//
-//            @Override
-//            public void onAnimationRepeat(Animation animation) {
-//            }
-//
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//                imgV.startAnimation(animationEnlarge);
-//            }
-//        });
-//
-//    }
-
-    public void onClickQRScanner(View v) {
-//        setAnimationGrowShrink(mQRScannerButton);
-
-//        mQRScannerButton.setColorFilter(ContextCompat.getColor(this, R.color.colorSelectedTab));
-//        Intent qrScanIntent = new Intent(this, QRActivity.class);
-//        startActivityForResult(qrScanIntent, QR_REQUEST);
     }
 
 
